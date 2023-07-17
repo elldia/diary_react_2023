@@ -1,0 +1,15 @@
+.container {
+    background:aqua;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-around;
+    align-items:center;
+    height:600px;
+}
+.container p {
+    background:yellow;
+    flex:1;
+    height:200px;
+}
+.container p:first-child {flex:2; order:4; align-self:flex-end;}
+.container p:last-child {order:-1;}
