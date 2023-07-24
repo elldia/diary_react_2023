@@ -1,17 +1,25 @@
 import './styles/diary.css';
-import Util from './util';
-// import {getEmotionImgById} from './util'
+import Home from './pages/Home';
+import New from './pages/New';
+import Diary from './pages/Diary';
+import Edit from './pages/Edit';
+import { Routes, Route, Link } from 'react-router-dom';
 
 function App() {
   return (
     <>
-      {
-        <Util />
-      /* <img src={getEmotionImgById(1)} alt="" />    
-      <img src={getEmotionImgById(2)} alt="" />    
-      <img src={getEmotionImgById(3)} alt="" />    
-      <img src={getEmotionImgById(4)} alt="" />    
-      <img src={getEmotionImgById(5)} alt="" /> */}    
+      <nav>
+        <Link to={"/"}>Home</Link>
+        <Link to={"/new"}>New</Link>
+        <Link to={"/diary"}>Diary</Link>
+        <Link to={"/edit"}>Edit</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/new" element={<New />} />
+        <Route path="/diary" element={<Diary />} />
+        <Route path="/edit" element={<Edit />} />
+      </Routes>
     </>
   );
 }
