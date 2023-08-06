@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <nav>
-        <Link to={"/"}>Home</Link>
+        <Link to={"/"}>Home_2</Link>
         <Link to={"/new"}>New</Link>
         <Link to={"/diary"}>Diary</Link>
         <Link to={"/edit"}>Edit</Link>
